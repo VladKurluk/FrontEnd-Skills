@@ -1,0 +1,20 @@
+.panel {
+    display: flex;
+    height: 100vh;
+}
+
+.panel__left {
+    width: 50%;
+    background-color: aqua;
+}
+
+.panel__right {
+    background-color: tomato;
+    flex-grow: 1;
+}
+
+.panel__bar {
+    width: 14px;
+    background-color: grey;
+    cursor: col-resize;
+}
