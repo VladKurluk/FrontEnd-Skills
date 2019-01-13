@@ -1,0 +1,85 @@
+body {
+    background-color: hsla(241, 12%,16%, 1)
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.bulb {
+    position: absolute;
+    z-index: 2;
+    top: 20px;
+    width: 50px;
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+}
+
+.bulb path {
+    transition: fill .2s  cubic-bezier(0.550, 0.085, 0.680, 0.530);
+}
+
+.bulb__light {
+    fill: hsla(241, 13%,12%, 1);
+}
+
+.bulb__shine {
+    opacity: 0;
+}
+
+.bulb__filament {
+    fill: hsla(241, 13%,12%, 1);
+}
+
+.bulb__glow {
+    display: block;
+    height: 100px;
+    width: 100px;
+    left: 50%;
+    opacity: 0.35;
+    position: absolute;
+    z-index: 1;
+    transform: translateX(-50%) scale(0);
+    -webkit-transform: translateX(-50%) scale(0);
+    -moz-transform: translateX(-50%) scale(0);
+    -ms-transform: translateX(-50%) scale(0);
+    -o-transform: translateX(-50%) scale(0);
+    top: 0px;
+    background-image: radial-gradient(hsla(50, 100%, 63%, 1),hsla(52, 100%, 50%, 0) 70%)
+}
+
+.is-light-on .bulb__light {
+    fill: hsla(42, 100%, 63%, 1);
+}
+
+.is-light-on .bulb__shine  {
+    opacity: 1;
+    transition: opacity .3s  cubic-bezier(0.550, 0.085, 0.680, 0.530);
+    -webkit-transition: opacity .3s  cubic-bezier(0.550, 0.085, 0.680, 0.530);
+    -moz-transition: opacity .3s  cubic-bezier(0.550, 0.085, 0.680, 0.530);
+    -ms-transition: opacity .3s  cubic-bezier(0.550, 0.085, 0.680, 0.530);
+    -o-transition: opacity .3s  cubic-bezier(0.550, 0.085, 0.680, 0.530);
+    transition-delay: .1s;
+}
+
+.is-light-on .bulb__glow {
+    transform: translateX(-50%) scale(1);
+    -webkit-transform: translateX(-50%) scale(1);
+    -moz-transform: translateX(-50%) scale(1);
+    -ms-transform: translateX(-50%) scale(1);
+    -o-transform: translateX(-50%) scale(1);
+}
+
+.is-light-on .bulb__filament {
+    fill: hsla(2, 100%, 70%, 1);
+}
+
+.desk {
+    width: 300px;
+}
